@@ -1,150 +1,262 @@
 :root {
-    font-size: 16px;
-    --text-primary: #b6b6b6;
-    --text-seocndary: #ececec;
-    --bg-primary: #12151a;
-    --bg-secondary: #1a1f25;
-    --bg-third: #ea7ad7;
+  font-size: 16px;
+  --text-primary: white;
+  --text-secondary: #ededed;
+  --bg-primary: #12151a;
+  --bg-secondary: #1a1f25;
+  --bg-select: #12151a;
+  /* --bg-third: #e558cd; */
+  --bg-third: #46b3e6;
 
-    --transition-speed: 600ms;
+  --morning-theme: 0;
+  --night-theme: 1;
 
+  --transition-speed: 600ms;
 }
 
 body {
-    color: black;
-    background-color: var(--bg-primary);
-    margin: 0;
-    padding: 0; 
+  background-color: var(--bg-primary);
+  margin: 0;
+  padding: 0;
+  transition: var(--transition-speed);
 }
 
 body::webkit-scrollbar {
-    width: 0.5rem;
+  width: 0.5rem;
 }
 
 body::webkit-scrollbar-track {
-    background: var(--bg-secondary);
+  background: var(--bg-secondary);
 }
 
 body::webkit-scollbar-thumb {
-    background: #ea7ad7;
+  background: bg var(--bg-third);
 }
 
 .navbar {
-    width: 5rem;
-    height: 100vh;
-    position: fixed;
-    background-color: var(--bg-secondary);
-    transition: 200ms ease-in-out;
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+  background-color: var(--bg-secondary);
+  transition: 200ms ease-in-out;
 }
 
 .navbar-nav {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
 }
 
 .navbar-item {
-    width: 100%;
+  width: 100%;
 }
 
 .navbar-link:last-child {
-    margin-top: auto;
+  margin-top: auto;
 }
 
 .navbar-link {
-    display: flex;
-    align-items: center;
-    height: 5rem;
-    text-decoration: none;
-    filter: grayscale(100%) opacity(0.7);
-    transition: var(--transition-speed);
-    color: white;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+  color: var(--text-primary);
+  width: 100%;
 }
 
 .navbar-link:hover {
-    filter: grayscale(0%) opacity(1);
-    background: var(--bg-primary);
-    color: white;
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-select);
+  color: var(--text-primary);
 }
 
 .navbar:hover .fas {
-    filter: opacity(1);
+  filter: opacity(1);
 }
-
 
 .link-text {
-    display: none;
-    margin-left: 1rem;
-}
-
-.navbar-link .fas {
-    width: 2rem;
-    min-width: 2rem;
-    margin: 0 1.5rem;
-}
-
-.navbar:hover {
-    width: 16rem;
+  margin-left: 1rem;
+  opacity: 0;
+  transition: opacity 200ms ease;
+  pointer-events: none;
 }
 
 .navbar:hover .link-text {
-    display: block;
+  opacity: 1;
+  pointer-events: inherit;
+}
+
+.navbar-link .fas {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.navbar:hover {
+  width: 16rem;
 }
 
 .fas {
-    font-size: 1.3rem;
-    color: #df42d1;
-    transition: var(--transition-speed) ease-in-out;
+  font-size: 1.3rem;
+  color: var(--bg-third);
+  transition: var(--transition-speed) ease-in-out;
+}
+
+#night {
+  opacity: var(--night-theme);
+  transition: 200ms ease;
+}
+
+#morning {
+  opacity: var(--morning-theme);
+  color: #fddb3a;
+  transition: 200ms ease;
+
+  position: relative;
+  right: 5rem;
+}
+
+#theme-text {
+  position: absolute;
+  margin-left: 6rem;
 }
 
 .logo {
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.3ch;
-    text-align: center;
-    margin-bottom: 1rem;
-    background: var(--bg-primary);
-    font-size: 1.5rem;
-    width: 100%;
-    transition: var(--transition-speed) ease-in-out;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.3ch;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: var(--bg-select);
+  font-size: 1.5rem;
+  width: 100%;
+  transition: 200ms ease;
 }
 
 .fa-angle-double-right {
-    margin-left: auto;
-    transform: rotate(0deg);
-    font-size: 3rem;
-    transition: 500ms ease-in-out;
-    filter: grayscale(100%) opacity(0.7);
+  transform: rotate(0deg);
+  font-size: 2.1rem;
+  transition: transform 500ms ease;
+  filter: grayscale(100%) opacity(0.7);
 }
 
 .navbar:hover .fa-angle-double-right {
-    transform: rotate(-180deg);
-    filter: grayscale(0%) opacity(1);
-    margin-left: 10rem;
+  position: relative;
+  right: 0.1rem;
+  margin-left: 10.5rem;
+  transform: rotate(-180deg);
+  filter: grayscale(0%) opacity(1);
 }
 
-
 .logo-text {
-    position: absolute;
-    margin-top: 0.5rem;
-    margin-bottom: auto;
-    color: white;
-    transition: var(--transition-speed);
-    filter: grayscale(100%) opacity(0.7);
+  position: absolute;
+  margin-right: 2rem;
+  margin-top: 0.2rem;
+  margin-bottom: auto;
+  left: 0.1rem;
+  color: gray;
+  transition: opacity 200ms ease;
+  opacity: 0;
+  animation-name: glow2;
+  animation-fill-mode: backwards;
+  animation-duration: 600ms;
+}
+
+.navbar:hover .logo-text {
+  opacity: 0.7;
+}
+
+@keyframes glow2 {
+  0% {
+    color: var(--text-primary);
+  }
+  100% {
+    color: grey;
+  }
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0.7;
+    color: grey;
+  }
+  100% {
+    opacity: 1;
+    color: var(--text-primary);
+  }
 }
 
 .logo:hover .logo-text {
-    color: white;
-    filter: grayscale(0%) opacity(1);
+  animation-name: glow;
+  animation-fill-mode: forwards;
+  animation-duration: 600ms;
 }
 
 main {
-    color: white;
-    margin-left: 5rem;
-    padding: 1rem;
+  color: var(--text-primary);
+  margin-left: 5rem;
+  padding: 1rem;
 }
+
+/* @media only screen and (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+
+  .navbar:hover {
+    width: 100vh;
+    height: 5.5rem;
+  }
+
+  .navbar:hover .link-text {
+    display: block;
+  }
+
+  .navbar-link .fas {
+    margin-left: auto;
+    margin-right: auto;
+    transition: var(--transition-speed) ease;
+  }
+
+  .navbar:hover .fas {
+    margin-bottom: 1rem;
+  }
+
+  .navbar {
+    width: 100vh;
+    height: 5rem;
+    transition: var(--transition-speed) ease;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .navbar-link {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .navbar-link:last-child {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .link-text {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: 1.3rem;
+    position: absolute;
+  }
+
+  main {
+    margin: 0;
+  }
+} */

@@ -1,89 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="./index.css">
+  <head>
+    <link rel="stylesheet" href="./index.css" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
       rel="stylesheet"
     />
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Test</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="navbar">
-        <ul class="navbar-nav">
-            <li class="logo">
-                <a href="#" class="nav-link">
-                    <span class="link-text logo-text">Navbar</span>
-                    <i class="fas fa-angle-double-right"></i>
-                    </a>
-            </li>
-            <!--Home-->
-            <li class="navbar-link">
-                <a href="#" class="navbar-link">
-                    <i class="fas fa-home"></i>
-                    <span class="link-text">Home</span>
-                </a>
-            </li>
-            <!--About-->
-            <li class="navbar-link">
-                <a href="#" class="navbar-link">
-                    
-                    <i class="fas fa-info-circle"></i>
-                    
-                    <span class="link-text">About</span>
-                </a>
-            </li>
-            <!--Profile-->
-            <li class="navbar-link">   
-                <a href="#" class="navbar-link">
-                 
-                    <i class="fas fa-address-card"></i>
-                
-                    <span class="link-text">Profile</span>
-                </a>
-            </li>
-            <!--Support-->
-            <li class="navbar-link">
-                <a href="#" class="navbar-link">
-                 
-                    <i class="fas fa-people-carry"></i>
-                
-                    <span class="link-text">Support</span>
-                </a>
-            </li>
-            <!--Night Mode-->
-            <li class="navbar-link">
-                
-                <a href="#" class="navbar-link">
-                    <i class="fas fa-moon"></i>
-                
-                    <span class="link-text">Theme</span>
-                </a>
-            </li>
-            <!--Morning Mode-->
-            <!-- <li class="navbar-link">
+      <ul class="navbar-nav">
+        <li class="logo">
+          <a href="#" class="nav-link">
+            <span class="link-text logo-text" id="unit">Navbar</span>
+            <i class="fas fa-angle-double-right"></i>
+          </a>
+        </li>
+        <!--Home-->
+        <li class="navbar-link">
+          <a href="#" class="navbar-link">
+            <i class="fas fa-home"></i>
+            <span class="link-text">Home</span>
+          </a>
+        </li>
+        <!--About-->
+        <li class="navbar-link">
+          <a href="#" class="navbar-link">
+            <i class="fas fa-info-circle"></i>
+
+            <span class="link-text">About</span>
+          </a>
+        </li>
+        <!--Profile-->
+        <li class="navbar-link">
+          <a href="#" class="navbar-link">
+            <i class="fas fa-address-card"></i>
+
+            <span class="link-text">Profile</span>
+          </a>
+        </li>
+        <!--Support-->
+        <li class="navbar-link">
+          <a href="#" class="navbar-link">
+            <i class="fas fa-people-carry"></i>
+
+            <span class="link-text">Support</span>
+          </a>
+        </li>
+        <!--Night Mode-->
+        <li class="navbar-link">
+          <a href="#" onclick="ChangeTheme()" class="navbar-link">
+            <i class="fas fa-moon" id="night"></i>
+            <i class="fas fa-sun" id="morning"></i>
+
+            <span class="link-text" id="theme-text">Theme</span>
+          </a>
+        </li>
+        <!--Morning Mode-->
+        <!-- <li class="navbar-link">
                 <a href="#" class="navbar-link">
                     <i class="fas fa-sun"></i>
                 </a>
             </li> -->
-        </ul>
+      </ul>
     </nav>
 
     <main>
-        <h1>Amazon's Echo Studio is on sale for the first time</h1>
-        <p>Delivering "the biggest, best Echo sound yet" (according to CNET's Echo Studio review), Amazon's newest smart speaker offers such high-falutin' features as Dolby Atmos and stereo pairing with another Echo. Its chief rivals are the $300 Apple HomePod and $200 Sonos One.
-
-            The reason I've been eyeballing this is that my kitchen Echo gets a lot of use, especially for music, but it's a five-year-old first-gen model. I've often wished for a better-sounding speaker in that coveted spot.
-            
-            Interestingly, Amazon's Echo trade-in program would net me another 25% off the Studio and a $25 Amazon gift card, should I decide to relinquish that old-timer. If you have an Echo you might like to trade in, it's worth seeing what you can get for it.
-            
-            Prime Day is still a few months away, but I wouldn't be surprised to see the Echo Studio dip to around $150 during that event. For now, however, this is the best deal yet.</p>
-            <button style="margin-left: 300px;">Hello!</button>
+      <h1>Amazon's Echo Studio is on sale for the first time</h1>
+      <p>
+        Delivering "the biggest, best Echo sound yet" (according to CNET's Echo
+        Studio review), Amazon's newest smart speaker offers such high-falutin'
+        features as Dolby Atmos and stereo pairing with another Echo. Its chief
+        rivals are the $300 Apple HomePod and $200 Sonos One. The reason I've
+        been eyeballing this is that my kitchen Echo gets a lot of use,
+        especially for music, but it's a five-year-old first-gen model. I've
+        often wished for a better-sounding speaker in that coveted spot.
+        Interestingly, Amazon's Echo trade-in program would net me another 25%
+        off the Studio and a $25 Amazon gift card, should I decide to relinquish
+        that old-timer. If you have an Echo you might like to trade in, it's
+        worth seeing what you can get for it. Prime Day is still a few months
+        away, but I wouldn't be surprised to see the Echo Studio dip to around
+        $150 during that event. For now, however, this is the best deal yet.
+      </p>
+      <button style="margin-left: 300px;">Hello!</button>
     </main>
 
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
