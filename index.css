@@ -210,7 +210,7 @@ main {
   }
 
   .navbar:hover {
-    width: 100vh;
+    width: 100vw;
     height: 5.5rem;
   }
 
@@ -229,7 +229,7 @@ main {
   }
 
   .navbar {
-    width: 100vh;
+    width: 100vw;
     height: 5rem;
     transition: var(--transition-speed) ease;
   }
@@ -241,19 +241,29 @@ main {
   .navbar-link {
     justify-content: center;
     text-align: center;
+    height: 5.5em;
   }
 
-  .navbar-link:last-child {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .link-text {
+  .link-text,
+  #theme-text {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: auto;
-    margin-top: 1.3rem;
+    margin-top: 1.5rem;
     position: absolute;
+  }
+
+  #morning {
+    position: relative;
+    right: 2.2rem;
+    bottom: 0.1rem;
+    text-align: center;
+    transition: var(--transition-speed) ease;
+  }
+
+  #night {
+    margin-left: 2.4rem;
+    transition: var(--transition-speed) ease;
   }
 
   main {
